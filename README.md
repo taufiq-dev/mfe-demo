@@ -2,7 +2,9 @@ This is a Microfrontend Architecture using rsbuild and module federation.
 
 ## Set up
 
-Run `npm i` at the root directory.
+This is a monorepo setup with workspaces inside the root directory's package.json so,
+
+Just run `npm i` at the root directory.
 
 Run `npm run dev` on both mfe-client-a and mfe-client-b directories.
 
