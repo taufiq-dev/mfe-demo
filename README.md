@@ -3,7 +3,9 @@ This is a Microfrontend Architecture using rsbuild and module federation.
 ## Set up
 
 Run `npm i` at the root directory.
+
 Run `npm run dev` on both mfe-client-a and mfe-client-b directories.
+
 Finally run `npm run dev` on mfe-host directory.
 
 ## See it in action
