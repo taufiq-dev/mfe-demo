@@ -1,0 +1,13 @@
+{
+  "name": "mfe-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "mfe-host",
+    "mfe-client-a",
+    "mfe-client-b"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
