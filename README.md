@@ -14,8 +14,8 @@ Finally run `npm run dev` on mfe-host directory.
 
 Open up `localhost:3000` on your browser.
 
-`localhost:3000/mfe_client_a` will load client-a mfe and `localhost:3000/mfe_client_b` will load client-b mfe.
+`localhost:3000/mfe-client-a` will load client-a mfe and `localhost:3000/mfe_client_b` will load client-b mfe.
 
 They also have their own child page called `extra-page`
 
-E.g. `localhost:3000/mfe_client_a/extra-page` and `localhost:3000/mfe_client_b/extra-page`
+E.g. `localhost:3000/mfe-client-a/extra-page` and `localhost:3000/mfe_client_b/extra-page`
