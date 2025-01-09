@@ -10,6 +10,9 @@ export default defineConfig({
       exposes: {
         './routes': './src/routes.tsx',
       },
+      remotes: {
+        mfe_host: 'mfe_host@http://localhost:3000/mf-manifest.json',
+      },
       shared: {
         react: {
           singleton: true,
@@ -20,12 +23,14 @@ export default defineConfig({
         'react-router': {
           singleton: true,
         },
+        tailwindcss: { singleton: true },
+        postcss: { singleton: true },
       },
     }),
   ],
   tools: {
     postcss: (opts, { addPlugins }) => {
-      addPlugins(require('@tailwindcss/postcss'));
+      addPlugins(require('tailwindcss'));
     },
   },
   server: {

@@ -3,18 +3,18 @@ import {
   type RouteObject,
   RouterProvider,
 } from 'react-router';
-import Home from './pages/home';
+import Layout from './components/layout';
 
 const microFrontends: RouteObject[] = [
   {
-    path: '/mfe_client_a/*',
+    path: '/mfe-client-a/*',
     async lazy() {
       const module = await import('mfe_client_a/routes');
       return { Component: module.default };
     },
   },
   {
-    path: '/mfe_client_b/*',
+    path: '/mfe-client-b/*',
     async lazy() {
       const module = await import('mfe_client_b/routes');
       return { Component: module.default };
@@ -25,9 +25,9 @@ const microFrontends: RouteObject[] = [
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
+    children: [...microFrontends],
   },
-  ...microFrontends,
 ]);
 
 const App = () => {

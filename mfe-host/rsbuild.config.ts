@@ -7,6 +7,9 @@ export default defineConfig({
     pluginReact(),
     pluginModuleFederation({
       name: 'mfe_host',
+      exposes: {
+        './TailwindStyles': './src/index.css',
+      },
       remotes: {
         mfe_client_a: 'mfe_client_a@http://localhost:3001/mf-manifest.json',
         mfe_client_b: 'mfe_client_b@http://localhost:3002/mf-manifest.json',
@@ -21,12 +24,14 @@ export default defineConfig({
         'react-router': {
           singleton: true,
         },
+        tailwindcss: { singleton: true },
+        postcss: { singleton: true },
       },
     }),
   ],
   tools: {
     postcss: (opts, { addPlugins }) => {
-      addPlugins(require('@tailwindcss/postcss'));
+      addPlugins(require('tailwindcss'));
     },
   },
 });

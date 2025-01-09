@@ -1,5 +1,14 @@
+// import '../index.css';
+
 const Home = () => {
-  return <>MFE CLIENT A!</>;
+  return (
+    <>
+      <div className='bg-red-500'>MFE CLIENT A!</div>
+      <div className='block sm:hidden md:block'>
+        <span>test</span>
+      </div>
+    </>
+  );
 };
 
 export default Home;
